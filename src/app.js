@@ -8,14 +8,6 @@ const hbs = require('hbs');
 
 
 
-// Server Port or Hostname
-const port = process.env.PORT || 80;
-const hostname = '127.0.0.1'
-
-
-
-
-
 // To  set the templates engines
 app.set('view engine', 'hbs');
 
@@ -73,6 +65,21 @@ app.get('*', (req, res)=>{
 })
 
 
-app.listen(port, hostname, ()=>{
-    console.log(`Server is Starting at (press Ctrl and click to Visit) ->  http://${hostname} . `);
-} )
+// Server Port or Hostname
+// const port = process.env.PORT || 3000;
+// const hostname = '127.0.0.1'
+
+
+// var port_number = server.listen(process.env.PORT || 3000);
+// app.listen(port_number);
+
+
+
+
+// app.listen(port, hostname, ()=>{
+//     console.log(`Server is Starting at (press Ctrl and click to Visit) ->  port 3000 . `);
+// } )
+
+
+const myPort = server.listen(process.env.PORT || 3000);
+app.listen(myPort)
