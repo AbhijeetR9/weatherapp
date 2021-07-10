@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>css}}
+    <title>404 - Page Not Found 🥺</title>
+    {{>script}}
+</head>
+
+<body>
+
+
+    {{!-- Navbar Starts --}}
+    {{>navbar}}
+
+
+    {{!-- Navbar Ends --}}
+
+
+    
+    <!-- *******************************Main header  Starts ***********************************************-->
+
+
+    <div class="container-fluid main_header">
+
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto d-flex box">
+                
+                <!-- Left Side div -->
+                <div class="col-md-12 col-12 main_header_left align-items-center">
+
+                   <figure class="errimg">
+                       <img src="https://i.pinimg.com/originals/99/e4/bc/99e4bc8191b2c9b22c67f93c901ea7ae.png" alt="404_error_page_Img" class="img-fluid" title="Hey! This is an 404 Page Not Found error">
+                   </figure>
+                {{!-- </div> --}}
+
+                <!-- Right Side div -->
+
+                {{!-- <div class="col-md-6 col-12 main_header_left"> --}}
+
+                    {{!-- <p>Hey!!! It's an Error Page.</p> --}}
+                    <p>{{errmsg}}</p>
+
+                    <h1>Looks Not so good <span class="text_clr">Try</span> to <span style="font-weight: bold;">go Back.</span> 😩</h1>
+                    <a href="/"><button>👉 Go Back</button></a>
+                  
+                </div>
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+  
+
+    <!-- ******************************* Main header  Ends ***********************************************-->
+
+
+
+
+    {{!-- Footer Starts --}}
+    {{>footer}}
+
+    {{!-- Footer Ends --}}
+
+
+
+</body>
+
+</html>

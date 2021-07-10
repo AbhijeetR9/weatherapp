@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{>css}}
+  <title>Weather App 🌡</title>
+
+  {{>script}}
+</head>
+
+<body>
+
+  {{!-- Navbar Starts --}}
+  {{>navbar}}
+
+
+  {{!-- Navbar Ends --}}
+
+
+  <!-- *******************************Main header  Starts ***********************************************-->
+
+
+  <div class="container-fluid main_header weather_bg">
+
+    <div class="row">
+      <div class="col-md-10 col-12 mx-auto  box ">
+
+        <div class="main_content">
+          <form action="" class="temp_form">
+            <input type="text" id="cityName" placeholder="Enter Your City Name" autocomplete="off">
+            <input type="submit" value="Search" id="submitBtn">
+          </form>
+
+        </div>
+
+        <div class="tempInformation">
+          <div class="top_layer">
+            <p id="day">Monday</p>
+            <p id="today_Date">13 Oct</p>
+         
+
+
+          </div>
+
+          <div class="main_layer">
+            <p id="city_Name">Get Output Here://</p>
+            <div class="middle_layer " id="data_hide">
+
+              <p id="temp"> <span id="tempInCel">0</span><sup>&#8304;</sup>C</p>
+              <p id="temp_Status"> <i class="fas fa-cloud"></i> </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- ******************************* Main header  Ends ***********************************************-->
+
+
+
+
+  {{!-- Footer Starts --}}
+  {{>footer}}
+
+  {{!-- Footer Ends --}}
+
+
+  <script src="js/main.js"></script>
+  <script>
+    const mydate = new Date();
+
+  
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"]
+
+    const day = document.getElementById("day");
+    const newDay = days[mydate.getDay()];
+    day.innerText = newDay;
+
+    
+
+
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    const today_Date = document.getElementById("today_Date")
+
+    const newDate_month = `${mydate.getDate()} ${months[mydate.getMonth()]}`
+
+    today_Date.innerText = newDate_month
+
+
+  </script>
+
+</body>
+
+</html>
