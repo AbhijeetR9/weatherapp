@@ -70,10 +70,6 @@ const port = process.env.PORT || 3000;
 const hostname = '0.0.0.0'
 
 
-// var port_number = server.listen(process.env.PORT || 3000);
-// app.listen(port_number);
-
-
 
 
 app.listen(port, hostname, ()=>{

@@ -40,6 +40,7 @@ const getInfo = async (e) => {
     else if (/^\s+$/.test(cityVal)) {
         // console.log("Contains Spacing");
         city_Name.innerText = `Please Enter City Name Properly :)`
+       
         
     }
   
@@ -51,7 +52,6 @@ const getInfo = async (e) => {
             data_hide.style.visibility= "visible";
 
             
-            data_hide.style.visi
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=ffe5065224a4e55cd208c32ad7d6bae8`
 
             const response = await fetch(url);
@@ -60,7 +60,7 @@ const getInfo = async (e) => {
 
 
             const data = await response.json()
-
+         
 
             const arrData = [data];
             // console.log(arrData);
@@ -103,10 +103,12 @@ const getInfo = async (e) => {
 
         catch {
             city_Name.innerText = `Please Enter Your City Name Properly.`
+            data_hide.style.visibility= "hidden";
             
         }
     }
 
+    cityName.value =""
 
 }
 
