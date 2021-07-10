@@ -67,7 +67,7 @@ app.get('*', (req, res)=>{
 
 // Server Port or Hostname
 const port = process.env.PORT || 3000;
-const hostname = '127.0.0.1'
+const hostname = '0.0.0.0'
 
 
 // var port_number = server.listen(process.env.PORT || 3000);
